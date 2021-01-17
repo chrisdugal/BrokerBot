@@ -1,0 +1,6 @@
+{
+    "SLACK_OAUTH_TOKEN": "xoxp-",
+    "SLACK_BOT_OAUTH_TOKEN": "xoxb-",
+    "SLACK_SIGNING_SECRET": "",
+    "MONGO_CONNECTION_STRING": ""
+}
