@@ -155,7 +155,7 @@ def svm_prediction(stock):
     svr_rbf.fit(x_train, y_train)
 
     # test model - score (coefficient of determination r^2 of prediction)
-    svm_confidence = svr_rbf.score(x_test, y_test)
+    svr_confidence = svr_rbf.score(x_test, y_test)
 
     # Create and train the Linear Regression Model
     lr = LinearRegression()
@@ -168,12 +168,12 @@ def svm_prediction(stock):
     x_forecast = np.array(data[["Adj Close"]])[-days_ahead:]
 
     # calculate predictions
-    svm_prediction = svr_rbf.predict(x_forecast)[days_ahead - 1]
-    svm_confidence_pct = svm_confidence * 100
+    svr_prediction = svr_rbf.predict(x_forecast)[days_ahead - 1]
+    svr_confidence_pct = svr_confidence * 100
 
-    svm_pred = [
-        format(svm_prediction, ".2f"),
-        format(svm_confidence_pct, ".3f"),
+    svr_pred = [
+        format(svr_prediction, ".2f"),
+        format(svr_confidence_pct, ".3f"),
     ]
 
     lr_prediction = lr.predict(x_forecast)[days_ahead - 1]
@@ -185,7 +185,7 @@ def svm_prediction(stock):
     ]
 
     # return results
-    return svm_pred, lr_pred
+    return svr_pred, lr_pred
 
 
 def ann_prediction(stock):

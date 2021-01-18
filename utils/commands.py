@@ -129,28 +129,28 @@ def handle_predict(event):
     # get tickers
     tickers, invalid = process_args("PREDICT", event)
 
-    svm_preds = []
+    svr_preds = []
     lr_preds = []
     ann_preds = []
 
     # generate predictions
     for ticker in tickers:
-        svm_pred, lr_pred = analysis.svm_prediction(ticker)
+        svr_pred, lr_pred = analysis.svm_prediction(ticker)
         ann_pred = analysis.ann_prediction(ticker)
 
-        svm_preds.append(svm_pred)
+        svr_preds.append(svr_pred)
         lr_preds.append(lr_pred)
         ann_preds.append(ann_pred)
 
     # compose results string
     results = []
-    for (ticker, svm_pred, lr_pred, ann_pred) in zip(
-        tickers, svm_preds, lr_preds, ann_preds
+    for (ticker, svr_pred, lr_pred, ann_pred) in zip(
+        tickers, svr_preds, lr_preds, ann_preds
     ):
         bid_ask = analysis.get_ticker_bid_ask(ticker)
         results.append(
             f"{ticker} buy-ask: {bid_ask}\n"
-            f"\tsvm: {svm_pred[0]}, confidence: {svm_pred[1]}%\n"
+            f"\tsvr: {svr_pred[0]}, confidence: {svr_pred[1]}%\n"
             f"\tlr: {lr_pred[0]}, confidence: {lr_pred[1]}%\n"
             f"\tann: {ann_pred[0]}, confidence: {ann_pred[1]}%\n"
         )
