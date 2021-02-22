@@ -7,7 +7,7 @@ Disclaimer: Invest at your own discretion, BrokerBot's recommendations should no
 
 ## Demo
 
-If you would like to try out BrokerBot you can join the [demo workspace](https://join.slack.com/t/brokerbotdemo/shared_invite/zt-l2a6id5w-E5vDlErnV0ytBuEFh4a28Q)
+If you would like to try out BrokerBot you can join the [demo workspace](https://join.slack.com/t/brokerbotdemo/shared_invite/zt-mn10vknp-nn1CE4yn0q1b8XP~EpHHGg)
 
 ## Installation
 
