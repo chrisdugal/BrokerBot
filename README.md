@@ -1,6 +1,11 @@
 # BrokerBot
 
+## In Progress
+
+Implement [Fibonacci retracement](https://www.investopedia.com/terms/f/fibonacciretracement.asp) to determine support and resistance levels
+
 ## Overview
+
 BrokerBot is a Slack App that provides users a personal stock trading assistant! BrokerBot can keep track of your watchlist, help you out with technical analysis, and even predict future stock prices.
 
 Disclaimer: Invest at your own discretion, BrokerBot's recommendations should not be taken as professional advice
